@@ -42,4 +42,22 @@ class GildedRoseTest extends \PHPUnit\Framework\TestCase {
             $items[0]->quality
         );
     }
+
+    public function testAgedBrieIncreasesQualityAsItGetsOlder()
+    {
+        $quality = 0;
+
+        /** @var Item[] $items */
+        $items = [
+            new Item("Aged Brie", 10, $quality)
+        ];
+
+        $gildedRose = new GildedRose($items);
+        $gildedRose->update_quality();
+
+        $this->assertEquals(
+            $quality + 1,
+            $items[0]->quality
+        );
+    }
 }
