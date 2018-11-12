@@ -26,4 +26,20 @@ class GildedRoseTest extends \PHPUnit\Framework\TestCase {
             $items[0]->quality
         );
     }
+
+    public function testQualityCantBeNegative()
+    {
+        /** @var Item[] $items */
+        $items = [
+            new Item("foo", 1, 0)
+        ];
+
+        $gildedRose = new GildedRose($items);
+        $gildedRose->update_quality();
+
+        $this->assertGreaterThanOrEqual(
+            0,
+            $items[0]->quality
+        );
+    }
 }
