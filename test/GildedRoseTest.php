@@ -130,7 +130,7 @@ class GildedRoseTest extends \PHPUnit\Framework\TestCase
         /** @var Item[] $items */
         $quality = 4;
         $items = [
-            new Item("Backstage passes to a TAFKAL80ETC concert", rand(6,10), $quality)
+            new Item("Backstage passes to a TAFKAL80ETC concert", rand(6, 10), $quality)
         ];
 
         $gildedRose = new GildedRose($items);
@@ -147,7 +147,7 @@ class GildedRoseTest extends \PHPUnit\Framework\TestCase
         /** @var Item[] $items */
         $quality = 4;
         $items = [
-            new Item("Backstage passes to a TAFKAL80ETC concert", rand(1,5), $quality)
+            new Item("Backstage passes to a TAFKAL80ETC concert", rand(1, 5), $quality)
         ];
 
         $gildedRose = new GildedRose($items);
