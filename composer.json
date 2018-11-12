@@ -1,0 +1,15 @@
+{
+  "name": "bbasinski/glided-rose-kata",
+  "description": "Glided rose kata",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Bartosz Basiński",
+      "email": "basinski.bartosz@gmail.com"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "7.4.3"
+  }
+}
