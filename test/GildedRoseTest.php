@@ -10,4 +10,20 @@ class GildedRoseTest extends \PHPUnit\Framework\TestCase {
         $gildedRose->update_quality();
         $this->assertEquals("foo", $items[0]->name);
     }
+
+    public function testQualityDegradesTwiceAsFastWhenSellInExpires()
+    {
+        /** @var Item[] $items */
+        $items = [
+            new Item("foo", 0, 4)
+        ];
+
+        $gildedRose = new GildedRose($items);
+        $gildedRose->update_quality();
+
+        $this->assertEquals(
+            2,
+            $items[0]->quality
+        );
+    }
 }
