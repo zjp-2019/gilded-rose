@@ -60,4 +60,20 @@ class GildedRoseTest extends \PHPUnit\Framework\TestCase {
             $items[0]->quality
         );
     }
+
+    public function testQualityOfItemCantExceed50()
+    {
+        /** @var Item[] $items */
+        $items = [
+            new Item("Aged Brie", 0, 50)
+        ];
+
+        $gildedRose = new GildedRose($items);
+        $gildedRose->update_quality();
+
+        $this->assertEquals(
+            50,
+            $items[0]->quality
+        );
+    }
 }
