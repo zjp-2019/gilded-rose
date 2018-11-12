@@ -69,4 +69,42 @@ class GildedRoseTest extends \PHPUnit\Framework\TestCase
             $items[0]->quality
         );
     }
+
+    public function testSulfurasDoNotChangeQuality()
+    {
+        /** @var Item[] $items */
+        $quality = 50;
+        $items = [
+            new Item("Sulfuras, Hand of Ragnaros", 10, $quality)
+        ];
+
+        $gildedRose = new GildedRose($items);
+        $gildedRose->update_quality();
+        $gildedRose->update_quality();
+        $gildedRose->update_quality();
+
+        $this->assertEquals(
+            $quality,
+            $items[0]->quality
+        );
+    }
+
+    public function testSulfurasDoNotChangeSellIn()
+    {
+        /** @var Item[] $items */
+        $sellIn = 10;
+        $items = [
+            new Item("Sulfuras, Hand of Ragnaros", $sellIn, 50)
+        ];
+
+        $gildedRose = new GildedRose($items);
+        $gildedRose->update_quality();
+        $gildedRose->update_quality();
+        $gildedRose->update_quality();
+
+        $this->assertEquals(
+            $sellIn,
+            $items[0]->sell_in
+        );
+    }
 }
