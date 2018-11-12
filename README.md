@@ -1,4 +1,6 @@
 # Gilded Rose Kata
+This repository contains extracted PHP version of [Gilded Rose Refactoring Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata)
+
 ## Installation
 Clone repository
 ```
@@ -12,5 +14,3 @@ now you can run tests with
 ```
 vendor/bin/phpunit test/GildedRoseTest
 ```
-##
-This repository contains extracted PHP version of [Gilded Rose Refactoring Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata)
