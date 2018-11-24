@@ -174,4 +174,27 @@ class GildedRoseTest extends \PHPUnit\Framework\TestCase
             $items[0]->quality
         );
     }
+
+    public function testConjuredItemDegradesQualityTwiceAsFastAsNormalItem()
+    {
+        $quality = 12;
+        /** @var Item[] $items */
+        $items = [
+            new Item('Conjured Mana Cake', 12, $quality),
+            new Item('foo', 12, $quality)
+        ];
+
+        $gildedRose = new GildedRose($items);
+        $gildedRose->update_quality();
+
+        $this->assertEquals(
+            $quality - 2,
+            $items[0]->quality
+        );
+
+        $this->assertEquals(
+            $quality - 1,
+            $items[1]->quality
+        );
+    }
 }
