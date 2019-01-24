@@ -14,3 +14,6 @@ now you can run tests with
 ```
 vendor/bin/phpunit test/GildedRoseTest
 ```
+Authors:
+```
+ Bartosz Basiński, Dawid Więcko, Tomasz Borczyński
