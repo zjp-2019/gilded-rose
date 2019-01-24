@@ -4,7 +4,7 @@ This repository contains extracted PHP version of [Gilded Rose Refactoring Kata]
 ## Installation
 Clone repository
 ```
-git clone https://github.com/bbasinski/gilded-rose.git
+git clone https://github.com/zjp-2019/gilded-rose
 ```
 then install dependencies
 ```
