@@ -16,4 +16,4 @@ vendor/bin/phpunit test/GildedRoseTest
 ```
 Authors:
 ```
-Bartosz Basiński, Dawid Więcko, Tomasz Borczyński
+ Bartosz Basiński, Dawid Więcko, Tomasz Borczyński
