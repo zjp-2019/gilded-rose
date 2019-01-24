@@ -10,6 +10,10 @@
     }
   ],
   "require": {
-    "phpunit/phpunit": "7.4.3"
+    "phpunit/phpunit": "7.4.3",
+    "phlint/phlint": "^0.4.2",
+    "phpmd/phpmd": "^2.6",
+    "phpstan/phpstan": "^0.10.5",
+    "phpmetrics/phpmetrics": "^2.4"
   }
 }
